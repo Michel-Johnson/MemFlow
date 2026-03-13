@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MemFlow | 让碎片知识变成可反复刷的记忆流</title>
+  <meta
+    name="description"
+    content="MemFlow 是一款面向安卓端的 AI 学习卡片应用，支持 Markdown、AI 强化整理与短视频式刷卡复习；OCR 与多文件导入即将上线。"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero" id="top">
+      <nav class="topbar" aria-label="主导航">
+        <a class="brand" href="#top">
+          <img class="brand-logo" src="./logo.svg" alt="MemFlow 标志">
+          <span class="brand-copy">
+            <strong>MemFlow</strong>
+            <span>AI 学习卡片 Android App</span>
+            <span class="brand-credit">--created by Michel Johnson</span>
+          </span>
+        </a>
+
+        <div class="topnav">
+          <a class="button button-primary button-nav" href="./MemFlow-latest.apk" download="MemFlow-latest.apk">下载 APK</a>
+          <a class="button button-secondary button-nav" href="https://github.com/Michel-Johnson/MemFlow" target="_blank" rel="noreferrer">GitHub 项目地址</a>
+          <a class="button button-secondary button-nav" href="#demo">观看产品演示</a>
+        </div>
+      </nav>
+
+      <div class="hero-panel">
+        <section class="hero-copy">
+          <p class="eyebrow">Android / AI / Markdown <span class="badge badge-soon">OCR 即将上线</span></p>
+          <h1>把碎片知识，<br>变成能反复刷的<br>记忆流</h1>
+          <p class="hero-text">
+            MemFlow 不是传统的笔记页，也不是单纯的问答工具。
+            它把课堂笔记、截图、公式、重点段落整理成适合手机端反复刷的知识卡片，
+            再通过 AI 帮你补全结构、提炼重点、生成复习提示，让学习过程更像一个持续迭代的记忆流。
+          </p>
+
+          <ul class="hero-tags" aria-label="产品关键词">
+            <li>短视频式刷卡体验</li>
+            <li>以卡片为核心的信息组织</li>
+            <li>Markdown 与公式友好</li>
+            <li>图片 OCR 转知识卡片 <span class="badge badge-soon">即将上线</span></li>
+            <li>AI 协作整理与强化复习</li>
+            <li>
+              <a class="hero-tag-link" href="#future">
+                未来展望
+                <span class="badge badge-link">点击跳转</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="hero-devices" aria-label="MemFlow 安卓端界面预览">
+          <article class="device-frame device-main">
+            <img src="./card-3.jpg" alt="MemFlow AI 对话卡片界面">
+          </article>
+          <article class="device-frame device-create">
+            <img src="./card-2.jpg" alt="MemFlow 讲解卡片界面">
+          </article>
+          <article class="device-frame device-feed">
+            <img src="./card-1.jpg" alt="MemFlow 问答卡片界面">
+          </article>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <section id="overview" class="section">
+        <div class="section-heading">
+          <p class="section-label">核心界面</p>
+          <h2>围绕知识卡片展开的移动学习体验</h2>
+        </div>
+
+        <div class="screen-grid">
+          <figure class="screen-card">
+            <button class="screen-card-media" type="button" aria-label="预览 MemFlow 问答卡片界面">
+              <img src="./card-1.jpg" alt="MemFlow 问答卡片界面">
+            </button>
+            <figcaption>
+              <strong>核心问答卡片</strong>
+              <span>问题和答案放在同一张卡片里，注意力更集中。</span>
+            </figcaption>
+          </figure>
+
+          <figure class="screen-card">
+            <button class="screen-card-media" type="button" aria-label="预览 MemFlow 讲解卡片界面">
+              <img src="./card-2.jpg" alt="MemFlow 讲解卡片界面">
+            </button>
+            <figcaption>
+              <strong>讲解与提示卡片</strong>
+              <span>解释、公式和提示集中展示，适合手机快速阅读。</span>
+            </figcaption>
+          </figure>
+
+          <figure class="screen-card">
+            <button class="screen-card-media" type="button" aria-label="预览 MemFlow AI 对话界面">
+              <img src="./card-3.jpg" alt="MemFlow AI 对话界面">
+            </button>
+            <figcaption>
+              <strong>AI 对话协作</strong>
+              <span>围绕当前卡片继续追问和改写，边聊边完善内容。</span>
+            </figcaption>
+          </figure>
+
+          <figure class="screen-card">
+            <button class="screen-card-media" type="button" aria-label="预览 MemFlow 创建卡片界面">
+              <img src="./memflow_create.png" alt="MemFlow 创建卡片界面">
+            </button>
+            <figcaption>
+              <strong>创建卡片</strong>
+              <span>从原始素材快速生成卡片，先成卡再进入复习。</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section-heading">
+          <p class="section-label">产品能力</p>
+          <h2>不是堆功能，<br>而是围绕“从素材到记忆”<br>这条链路做完整闭环</h2>
+        </div>
+
+        <div class="feature-grid features-grid">
+          <article class="feature-card tone-blue">
+            <h3>Markdown 原生输入</h3>
+            <p>适合课程笔记、概念总结和带层级结构的复习内容输入，也能更自然地承载代码块、列表结构和数学公式，让原始素材在进入卡片整理前就足够清晰。</p>
+          </article>
+
+          <article class="feature-card tone-mint">
+            <h3>图片 OCR <span class="badge badge-soon">即将上线</span></h3>
+            <p>后续将支持把截图、拍照内容或公式图片先转成文字，再进入 AI 整理流程，减少手动誊写和重复输入，让图像素材也能顺畅进入制卡链路。</p>
+          </article>
+
+          <article class="feature-card tone-indigo">
+            <h3>AI 强化生成</h3>
+            <p>自动产出标题、自测问题、答案、复习提示和易错点，把原始素材转成更适合回忆、复习和反复刷看的卡片内容，而不只是简单摘要。</p>
+          </article>
+
+          <article class="feature-card tone-peach">
+            <h3>围绕单张卡片迭代</h3>
+            <p>你可以继续追问 AI、手动修改内容，或者直接基于当前卡片做二次重写，让每一张卡都能在使用过程中不断被补充、压缩和打磨得更适合自己。</p>
+          </article>
+
+          <article class="feature-card tone-rose">
+            <h3>移动端刷卡复习</h3>
+            <p>重点不是“存下来”，而是让卡片真的能被高频使用，在手机端形成持续刷卡、标记重点、回看强化的复习节奏，把内容真正送进长期记忆。</p>
+          </article>
+
+          <article class="feature-card tone-butter">
+            <h3>卡片优先管理</h3>
+            <p>搜索、编辑、归档、回顾都围绕卡片展开，文件夹只承担轻量分类而不是主角，让你管理的始终是知识本身，而不是越来越重的目录结构。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workflow">
+        <div class="section-heading">
+          <p class="section-label">使用路径</p>
+          <h2>一条最典型的学习流</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-step">
+            <span class="step-index">01</span>
+            <h3>导入素材</h3>
+            <p>先整理课堂笔记和教材摘要；多文件插入 <span class="badge badge-soon">即将上线</span></p>
+          </article>
+
+          <article class="timeline-step">
+            <span class="step-index">02</span>
+            <h3>OCR 与整理</h3>
+            <p>图片 OCR <span class="badge badge-soon">即将上线</span>，后续可先提取文字再交给 AI 整理。</p>
+          </article>
+
+          <article class="timeline-step">
+            <span class="step-index">03</span>
+            <h3>补全记忆信息</h3>
+            <p>补充自测问题、易错点、总结句，把“会看”变成“能回忆”。</p>
+          </article>
+
+          <article class="timeline-step">
+            <span class="step-index">04</span>
+            <h3>进入刷卡循环</h3>
+            <p>在 Feed 中持续滑动、标记、强化和回看，让内容真正进入长期记忆。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="demo" class="section">
+        <div class="section-heading">
+          <p class="section-label">演示视频</p>
+          <h2>六段核心演示，直接展示 MemFlow 在安卓端的真实交互</h2>
+        </div>
+
+        <div class="demo-grid">
+          <article class="demo-item">
+            <div class="video-shell">
+              <video class="demo-video" autoplay muted loop playsinline preload="metadata">
+                <source src="./demo-swipe.mp4" type="video/mp4">
+                你的浏览器暂不支持 HTML5 视频播放。
+              </video>
+            </div>
+            <div class="demo-caption">
+              <strong>滑动切页</strong>
+              <span>像信息流一样切页，移动端复习更自然。</span>
+            </div>
+          </article>
+
+          <article class="demo-item">
+            <div class="video-shell">
+              <video class="demo-video" autoplay muted loop playsinline preload="metadata">
+                <source src="./demo-multi-folder.mp4" type="video/mp4">
+                你的浏览器暂不支持 HTML5 视频播放。
+              </video>
+            </div>
+            <div class="demo-caption">
+              <strong>多文件夹刷卡</strong>
+              <span>支持多个文件夹组合刷卡，按你的复习范围灵活切换。</span>
+            </div>
+          </article>
+
+          <article class="demo-item">
+            <div class="video-shell">
+              <video class="demo-video" autoplay muted loop playsinline preload="metadata">
+                <source src="./demo-markdown.mp4" type="video/mp4">
+                你的浏览器暂不支持 HTML5 视频播放。
+              </video>
+            </div>
+            <div class="demo-caption">
+              <strong>Markdown 格式</strong>
+              <span>双击进入卡片，支持 Markdown 与公式。</span>
+            </div>
+          </article>
+
+          <article class="demo-item">
+            <div class="video-shell">
+              <video class="demo-video" autoplay muted loop playsinline preload="metadata">
+                <source src="./demo-feed-ai.mp4" type="video/mp4">
+                你的浏览器暂不支持 HTML5 视频播放。
+              </video>
+            </div>
+            <div class="demo-caption">
+              <strong>刷卡中 AI 对话</strong>
+              <span>复习时直接追问当前卡片，边刷边补理解。</span>
+            </div>
+          </article>
+
+          <article class="demo-item">
+            <div class="video-shell">
+              <video class="demo-video" autoplay muted loop playsinline preload="metadata">
+                <source src="./demo-ai-card.mp4" type="video/mp4">
+                你的浏览器暂不支持 HTML5 视频播放。
+              </video>
+            </div>
+            <div class="demo-caption">
+              <strong>AI 对话建卡</strong>
+              <span>通过连续对话，把素材整理成可复习卡片。</span>
+            </div>
+          </article>
+
+          <article class="demo-item">
+            <div class="video-shell">
+              <video class="demo-video" autoplay muted loop playsinline preload="metadata">
+                <source src="./demo-theme-mark.mp4" type="video/mp4">
+                你的浏览器暂不支持 HTML5 视频播放。
+              </video>
+            </div>
+            <div class="demo-caption">
+              <strong>深浅色与标记</strong>
+              <span>切换深浅色模式，并标记重点卡片。</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="future" class="section">
+        <div class="section-heading">
+          <p class="section-label future-section-label">未来展望</p>
+          <h2>让长文、文件和视频里的有效信息，也能直接沉淀进你的卡片库</h2>
+          <p>
+            MemFlow 后续不只想解决“手动做卡”，还想把那些本来很容易看完就忘的内容，
+            变成可以导入、整理、复习和持续回看的知识卡片。
+          </p>
+        </div>
+
+        <div class="feature-grid future-grid">
+          <article class="feature-card tone-blue">
+            <h3>长文卡片一键导入</h3>
+            <p>比如你在知乎读完一篇高质量长文，作者已经把 Key Point 或知识卡片整理在文末。未来可以直接点击链接，把这些卡片导入自己的库，省掉重复整理的时间。</p>
+          </article>
+
+          <article class="feature-card tone-mint">
+            <h3>多文件全自动制卡</h3>
+            <p>比如用户一次输入几份文件，像期末复习题库、讲义、笔记或重点清单，AI 自动抽取高频考点、归并重复内容，并批量生成适合复习的卡片。</p>
+          </article>
+
+          <article class="feature-card tone-indigo">
+            <h3>短视频知识归档</h3>
+            <p>比如很多面试技巧视频看完当下觉得有用，但过几天就忘了。未来可以把这类视频中的关键建议、表达模板和注意事项自动归档总结，沉淀成能反复刷的卡片。</p>
+          </article>
+
+          <article class="feature-card tone-rose">
+            <h3>分享卡片与卡片库</h3>
+            <p>未来支持把单张卡片或整个卡片库分享出去，让你整理出的重点、方法和有深度的理解，被更多真正需要的人看到。</p>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <p>MemFlow for Android · 面向碎片化学习与高频复习的 AI 卡片产品</p>
+    </footer>
+  </div>
+  <script>
+    (() => {
+      const heroDevices = document.querySelector(".hero-devices");
+      if (!heroDevices || !window.matchMedia("(pointer: fine)").matches) return;
+
+      const deviceFrames = Array.from(heroDevices.querySelectorAll(".device-frame"));
+      if (deviceFrames.length === 0) return;
+
+      const setActiveFrame = (nextActive) => {
+        deviceFrames.forEach((frame) => {
+          frame.classList.toggle("is-active", frame === nextActive);
+        });
+        heroDevices.classList.toggle("is-interacting", Boolean(nextActive));
+      };
+
+      heroDevices.addEventListener("mousemove", (event) => {
+        const pointedFrame = document
+          .elementsFromPoint(event.clientX, event.clientY)
+          .find((element) => element.classList?.contains("device-frame"));
+
+        if (pointedFrame && heroDevices.contains(pointedFrame)) {
+          setActiveFrame(pointedFrame);
+          return;
+        }
+
+        let nearestFrame = null;
+        let nearestDistance = Number.POSITIVE_INFINITY;
+
+        deviceFrames.forEach((frame) => {
+          const rect = frame.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          const distance = Math.hypot(event.clientX - centerX, event.clientY - centerY);
+
+          if (distance < nearestDistance) {
+            nearestDistance = distance;
+            nearestFrame = frame;
+          }
+        });
+
+        setActiveFrame(nearestFrame);
+      });
+
+      heroDevices.addEventListener("mouseleave", () => {
+        setActiveFrame(null);
+      });
+    })();
+  </script>
+</body>
+</html>
