@@ -114,8 +114,8 @@ MemFlow 已经完成了移动端刷卡式学习界面，支持在手机端持续
 
 ### 版本存档
 
-- [MemFlow-v0.2.0.apk](./MemFlow-v0.2.0.apk)
-- [MemFlow-v0.3.1.apk](./MemFlow-v0.3.1.apk)
+- [MemFlow_v0.2.0.apk](./Android_apk/MemFlow_v0.2.0.apk)
+- [MemFlow_v0.3.1.apk](./Android_apk/MemFlow_v0.3.1.apk)
 
 ---
 
