@@ -212,6 +212,7 @@ code {
 .demo-note li {
   color: var(--slate);
   line-height: 1.78;
+  text-wrap: pretty;
 }
 
 .hero-text {
@@ -613,6 +614,7 @@ code {
 
 .features-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .future-grid {
@@ -620,7 +622,12 @@ code {
 }
 
 .feature-card {
-  padding: 24px;
+  padding: 22px 20px;
+}
+
+.feature-card p {
+  font-size: 0.98rem;
+  letter-spacing: -0.01em;
 }
 
 .feature-card h3,
