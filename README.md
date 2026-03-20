@@ -35,13 +35,33 @@ MemFlow 想解决的，不是“怎么记更多笔记”，而是“看过的内
 
 ## 界面预览
 
-| 核心问答卡片 | 讲解与提示卡片 | AI 对话协作 | 创建卡片 |
-| --- | --- | --- | --- |
-| ![核心问答卡片](./card-1.jpg) | ![讲解与提示卡片](./card-2.jpg) | ![AI 对话协作](./card-3.jpg) | ![创建卡片](./memflow_create.png) |
+<table>
+  <tr>
+    <td align="center"><strong>核心问答卡片</strong></td>
+    <td align="center"><strong>讲解与提示卡片</strong></td>
+    <td align="center"><strong>AI 对话协作</strong></td>
+    <td align="center"><strong>创建卡片</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./card-1.jpg" alt="核心问答卡片" width="220" /></td>
+    <td align="center"><img src="./card-2.jpg" alt="讲解与提示卡片" width="220" /></td>
+    <td align="center"><img src="./card-3.jpg" alt="AI 对话协作" width="220" /></td>
+    <td align="center"><img src="./memflow_create.png" alt="创建卡片" width="220" /></td>
+  </tr>
+</table>
 
-| 当前AI接口 | Feed 复习界面 | 卡片库 |
-| --- | --- | --- |
-| ![当前卡片流](./memflow_current.png) | ![Feed 复习界面](./memflow_feed.png) | ![卡片库](./memflow_library.png) |
+<table>
+  <tr>
+    <td align="center"><strong>当前 AI 界面</strong></td>
+    <td align="center"><strong>Feed 复习界面</strong></td>
+    <td align="center"><strong>卡片库</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./memflow_current.png" alt="当前 AI 界面" width="220" /></td>
+    <td align="center"><img src="./memflow_feed.png" alt="Feed 复习界面" width="220" /></td>
+    <td align="center"><img src="./memflow_library.png" alt="卡片库" width="220" /></td>
+  </tr>
+</table>
 
 ---
 
@@ -116,6 +136,11 @@ MemFlow 已经完成了移动端刷卡式学习界面，支持在手机端持续
 
 - [MemFlow_v0.2.0.apk](./Android_apk/MemFlow_v0.2.0.apk)
 - [MemFlow_v0.3.1.apk](./Android_apk/MemFlow_v0.3.1.apk)
+- [MemFlow_v0.3.3.apk](./Android_apk/MemFlow_v0.3.3.apk)
+
+---
+
+## 
 
 ---
 
