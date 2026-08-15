@@ -209,6 +209,22 @@ a { color: inherit; text-decoration: none; }
   font-size: 19px;
 }
 
+.release-notice {
+  display: grid;
+  gap: 6px;
+  max-width: 650px;
+  margin-top: 22px;
+  padding: 14px 16px;
+  border: 2px solid var(--ink);
+  border-radius: var(--wobble-small);
+  background: var(--yellow);
+  box-shadow: var(--shadow-small);
+  line-height: 1.45;
+}
+
+.release-notice strong { font-size: 15px; }
+.release-notice span { color: #4e463b; font-size: 14px; font-weight: 700; }
+
 .hero-tags {
   display: flex;
   flex-wrap: wrap;

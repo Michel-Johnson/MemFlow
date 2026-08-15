@@ -130,10 +130,13 @@ MemFlow 已经完成了移动端刷卡式学习界面，支持在手机端持续
 
 ### 最新版本
 
-- [MemFlow-latest.apk](./MemFlow-latest.apk)
+- [MemFlow 1.0.2（versionCode 2003）](./MemFlow-latest.apk)
+
+> 安装提示：1.0.2 使用新的安装签名。已安装 0.4.7 或旧测试版的用户，请先备份卡片，再卸载旧版后安装；旧版不能直接覆盖升级。
 
 ### 版本存档
 
+- [MemFlow_v1.0.2.apk](./Android_apk/MemFlow_v1.0.2.apk)
 - [MemFlow_v0.4.7.apk](./Android_apk/MemFlow_v0.4.7.apk)
 - [MemFlow_v0.2.0.apk](./Android_apk/MemFlow_v0.2.0.apk)
 - [MemFlow_v0.3.1.apk](./Android_apk/MemFlow_v0.3.1.apk)
@@ -166,4 +169,3 @@ MemFlow 后续会继续打通更多知识入口，而不只是停留在手动做
 - GitHub 页面展示
 
 如果你正在参与测试，欢迎直接基于真实学习场景反馈问题和建议。
-
