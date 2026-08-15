@@ -11,12 +11,6 @@
 <p align="center">
   MemFlow 是一款面向安卓端的 AI 学习卡片应用，核心目标不是“存资料”，而是把零散内容整理成可以反复刷、持续强化、真正记住的卡片流。
 </p>
-<p align="center">
-  <a href="./MemFlow-latest.apk">下载最新 APK</a>
-
-
-
-
 ---
 
 ## 产品简介
@@ -130,13 +124,10 @@ MemFlow 已经完成了移动端刷卡式学习界面，支持在手机端持续
 
 ### 最新版本
 
-- [MemFlow 1.0.2（versionCode 2003）](./MemFlow-latest.apk)
-
-> 安装提示：1.0.2 使用新的安装签名。已安装 0.4.7 或旧测试版的用户，请先备份卡片，再卸载旧版后安装；旧版不能直接覆盖升级。
+- APK 暂时下架，正在重新检查安装包体积与发布配置。
 
 ### 版本存档
 
-- [MemFlow_v1.0.2.apk](./Android_apk/MemFlow_v1.0.2.apk)
 - [MemFlow_v0.4.7.apk](./Android_apk/MemFlow_v0.4.7.apk)
 - [MemFlow_v0.2.0.apk](./Android_apk/MemFlow_v0.2.0.apk)
 - [MemFlow_v0.3.1.apk](./Android_apk/MemFlow_v0.3.1.apk)
