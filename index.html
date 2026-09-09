@@ -4337,8 +4337,13 @@ document.querySelectorAll("#sheetQuick button").forEach(function(b){
     /* 关键：transform 不改变布局高度，需显式收紧，否则底部留大片空白。
        必须先清掉上次设的 height 再量自然高度 —— 否则 scrollHeight 会
        读到被自己压过的值，反复 resize 会越缩越小。 */
-    /* .phone 被缩放后布局仍占原始高度，需把容器高度收紧到实际视觉高度 */
-    body.style.height=Math.round((phone?phone.offsetHeight:NAT_H)*k)+"px";
+    /* .phone 被缩放后布局仍占原始高度，需把容器高度收紧到实际视觉高度。
+       注意 box-sizing:border-box —— 直接写视觉高会把 padding 算进去，
+       内容区反而少了 padding 那么多，手机底部溢出压到 .demo-foot 上。
+       所以要把上下 padding 加回去。 */
+    var bcs=getComputedStyle(body);
+    var padY=(parseFloat(bcs.paddingTop)||0)+(parseFloat(bcs.paddingBottom)||0);
+    body.style.height=Math.round((phone?phone.offsetHeight:NAT_H)*k+padY)+"px";
   }
   fit();
   var t=null;
