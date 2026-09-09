@@ -1124,21 +1124,8 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
 .fl-t{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--site-muted);}
 .fl-t b{display:block;color:var(--site-ink);font-weight:400;margin-bottom:3px;}
 .fl-kill .fl-t b{color:var(--site-accent);}
-.stack3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
-/* 架构只剩客户端 / 服务端两张卡：仍用 3 列会留一条空轨道，
-   两张卡被挤在左侧 2/3。改成两等列铺满。 */
-.stack3.stack2{grid-template-columns:repeat(2,1fr);}
-.st{background:var(--site-card);border:1px solid var(--site-line);border-radius:10px;padding:20px;}
-.st h3{font-size:15px;font-weight:400;margin:9px 0 7px;}
-.st>p{font-size:13.5px;line-height:1.6;color:var(--site-muted);}
 .tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;
   padding:3px 9px;border-radius:999px;border:1px solid var(--site-line);color:var(--site-muted);background:transparent;}
-.tag-w{border-color:color-mix(in oklab,#F54E00 40%,transparent);color:var(--site-accent);}
-.kv{margin-top:12px;}
-.kv div{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px solid var(--site-line-soft);font-size:13px;}
-.kv div:last-child{border-bottom:0;}
-.kv span:first-child{color:var(--site-muted);}
-.kv span:last-child{font-family:var(--mono);font-size:12px;text-align:right;}
 .foot{border-top:1px solid var(--site-line);padding:22px 0 30px;}
 .foot-in{max-width:1180px;margin:0 auto;padding:0 var(--gut);display:flex;flex-wrap:wrap;gap:10px 22px;
   align-items:center;justify-content:space-between;font-family:var(--mono);font-size:11px;
@@ -1207,7 +1194,7 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
 .hero .phone{transform:scale(var(--hero-k,1));transform-origin:top center;}
 .demo-body{display:flex;justify-content:center;}
 @media (max-width:1120px){.stage{align-items:center;}.demo-frame{max-width:100%;}}
-@media (max-width:960px){.trio,.stack3{grid-template-columns:1fr;}.fl{grid-template-columns:48px 1fr;}.fl-t{grid-column:2;}}
+@media (max-width:960px){.trio{grid-template-columns:1fr;}.fl{grid-template-columns:48px 1fr;}.fl-t{grid-column:2;}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{animation-duration:.01ms !important;transition-duration:.01ms !important;}}
 </style>
 </head>
@@ -1218,7 +1205,6 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
     <a class="brand" href="#top"><span class="brand-mk" aria-hidden="true"><i></i><i></i></span>MemFlow</a>
     <nav class="nav-r" aria-label="主导航">
       <a class="nav-hide" href="#how">功能</a>
-      <a class="nav-hide" href="#stack">架构</a>
       <a class="cta" href="./MemFlow-v1.0.2-arm64.apk" download>下载 APK</a>
     </nav>
   </div>
@@ -1672,34 +1658,6 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
 </section>
 
 
-
-<section class="band" id="stack">
-  <div class="wrap">
-    <div class="sec-head"><p class="eyebrow">架构</p><h2>一套代码两端跑，服务端管长活</h2></div>
-    <div class="stack3 stack2">
-      <div class="st">
-        <span class="tag">客户端</span><h3>Flutter</h3>
-        <p>iOS 与 Android 共用一套代码，按功能域分层：卡片库、复习、制卡、思考、建模、设置。</p>
-        <div class="kv">
-          <div><span>版本</span><span>1.0.8 (2009)</span></div>
-          <div><span>Dart SDK</span><span>^3.12.2</span></div>
-          <div><span>正文渲染</span><span>Markdown / LaTeX / HTML</span></div>
-          <div><span>本地存储</span><span>可恢复 JSON 落盘</span></div>
-        </div>
-      </div>
-      <div class="st">
-        <span class="tag">服务端</span><h3>Kotlin + Spring Boot</h3>
-        <p>账号、云端卡片、思考队列、思考 Agent、用户建模与 AI 制卡，数据库迁移版本化管理。</p>
-        <div class="kv">
-          <div><span>数据库</span><span>PostgreSQL + Flyway</span></div>
-          <div><span>鉴权</span><span>JWT + Refresh</span></div>
-          <div><span>可观测</span><span>Prometheus</span></div>
-          <div><span>运维</span><span>备份 / TLS / 追踪</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <footer class="foot">
   <div class="foot-in">
