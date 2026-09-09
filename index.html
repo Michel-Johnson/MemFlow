@@ -176,20 +176,12 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
 .btn-p:hover{background:#fff;}
 .btn-s{background:#262420;color:var(--site-ink);border:1px solid var(--site-line-soft);}
 .btn-s:hover{background:var(--site-card-hover);border-color:var(--site-line);}
-.live-badge{display:inline-flex;align-items:center;gap:7px;align-self:flex-start;
-  font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--site-muted);background:var(--site-card);border:1px solid var(--site-line);
-  padding:4px 11px;border-radius:999px;}
-.live-dot{width:5px;height:5px;border-radius:50%;background:var(--site-accent);animation:pulse 2s ease-in-out infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
 /* 精简到三条最核心的手势后改横排单行：
    竖排三行占 88px，横排只要 24px，hero 不再被提示清单压住。
    原先六行竖排时曾用两列 grid 解决 kbd 宽度不一导致的文字参差；
    现在每项 kbd 紧跟自己的说明，不存在跨行对齐问题，用 flex 即可。
    flex-wrap 保留：窄屏放不下时自动折行，不会溢出。 */
-/* 安装提示：签名不同导致的覆盖安装失败是真实会踩的坑，
-   放在下载按钮下方、提示列表上方。 */
-.apk-note{margin:0;font-size:12px;line-height:1.5;color:var(--site-muted);opacity:.82;}
 .try-list{list-style:none;margin:0;padding:0;
   display:flex;flex-wrap:wrap;gap:9px 18px;align-items:center;}
 .try-list li{display:inline-flex;align-items:center;gap:7px;}
@@ -210,23 +202,8 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
    外面再套底色+圆角会显出多余边界（mini-demo 已同样处理）。 */
 .demo-frame{background:none;border:0;border-radius:0;overflow:visible;}
 /* 状态行：保留「在演示什么 / 是否在播」的信息，但不再做成窗口标题栏 */
-.demo-bar{height:auto;display:flex;align-items:center;gap:8px;padding:0 2px 10px;}
 /* 三个红绿灯圆点属于「窗口」装饰，去掉外框后就不该留 */
-.demo-dots{display:none !important;}
-.demo-dots i{width:7px;height:7px;border-radius:50%;background:var(--site-line-bright);}
-.demo-tag{font-family:var(--mono);font-size:10.5px;color:var(--site-muted);letter-spacing:.02em;}
-.demo-live{margin-left:auto;display:inline-flex;align-items:center;gap:5px;
-  font-family:var(--mono);font-size:10px;color:var(--site-muted);text-transform:uppercase;letter-spacing:.06em;}
-.demo-live i{width:5px;height:5px;border-radius:50%;background:var(--site-green);}
-.demo-live.playing i{background:var(--site-accent);animation:pulse 1.4s ease-in-out infinite;}
 .demo-body{display:flex;justify-content:center;padding:26px 20px;}
-.demo-foot{border-top:1px solid var(--site-line);padding:7px 12px;display:flex;
-  align-items:center;justify-content:space-between;gap:12px;
-  font-family:var(--mono);font-size:10.5px;color:var(--site-muted);}
-.demo-foot button{font-family:var(--mono);font-size:10.5px;color:var(--site-muted);
-  background:transparent;border:1px solid var(--site-line);border-radius:999px;
-  padding:3px 10px;cursor:pointer;transition:color var(--site-dur),border-color var(--site-dur);}
-.demo-foot button:hover{color:var(--site-ink);border-color:var(--site-line-bright);}
 
 .phone{
   /* iPhone 17 Pro 逻辑分辨率 402×874（实测 1206×2622 @3x）。
@@ -1036,7 +1013,6 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
   /* 这台手机纯展示、不接受操作。让它不拦指针：
      万一将来布局变动与要点重叠，指针仍能落到要点上。 */
   pointer-events:none;}
-.sp-mid .fdemo-cap{justify-content:center;}
 
 /* 要点：默认低对比，命中（悬停或当前演示）才提亮 */
 .pt{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:start;
@@ -1177,14 +1153,6 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
 .fdemo.is-fast .tapdot i.go{animation-duration:.42s!important;}
 .fdemo.is-fast .tapdot b.mv{transition-duration:.42s!important;}
 
-.fdemo-cap{display:flex;align-items:center;gap:6px;margin-top:8px;
-  font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--site-muted);
-  min-height:16px;
-  /* 跟手机同宽并对齐：否则字幕会甩到手机外面很远（实测 693 vs 340） */
-  max-width:296px;width:100%;}
-.combo .fdemo-cap{justify-content:center;align-self:center;}
-.fdemo-cap i{width:5px;height:5px;border-radius:50%;background:var(--site-green);flex:none;}
-.fdemo-cap.idle i{background:var(--site-muted);}
 .feat-demo{margin-top:14px;}
 @media (max-width:960px){.fdemo{height:560px;width:100%;max-width:300px;}}
 /* 主舞台等比缩放：真机 402x874 在 phone 外框后是 422x894，
@@ -1213,9 +1181,7 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
 <section class="hero" id="top">
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <span class="live-badge"><i class="live-dot"></i>可直接操作</span>
       <h1>MemFlow 是你的提问式记忆工具，整个 App 就在这个网页里。</h1>
-      <p class="sub">右边不是截图，是真的应用。它会自己演示，你一碰就接管。</p>
       <div class="hero-cta">
         <!-- 真实下载：download 属性让浏览器直接下载而非导航。
              APK 与本页同目录（仓库根），故用相对路径。
@@ -1224,7 +1190,6 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
           下载 Android 版 · 36.5MB<span aria-hidden="true">↓</span></a>
         <a class="btn-s" href="#how">了解原理<span aria-hidden="true">→</span></a>
       </div>
-      <p class="apk-note">arm64-v8a 单架构包。旧测试版签名不同，请先备份卡片并卸载旧版再安装。</p>
       <ul class="try-list">
         <li><kbd>双击</kbd><span>揭开答案</span></li>
         <li><kbd>上下滑</kbd><span>换下一张</span></li>
@@ -1234,11 +1199,6 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
 
     <div class="stage">
       <div class="demo-frame">
-        <div class="demo-bar">
-          <span class="demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-          <span class="demo-tag" id="demoTag">MemFlow iOS · 刷卡</span>
-          <span class="demo-live playing" id="demoLive"><i></i><span id="demoLiveText">自动演示中</span></span>
-        </div>
         <div class="demo-body">
       <div class="phone">
         <div class="phone-screen" data-appearance="dark">
@@ -1601,10 +1561,6 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
         </div>
       </div>
         </div>
-        <div class="demo-foot">
-          <span id="demoStep">正在演示：双击卡片揭示答案</span>
-          <button type="button" id="demoToggle">暂停演示</button>
-        </div>
       </div>
     </div>
   </div>
@@ -1636,7 +1592,6 @@ h1,h2,h3,h4{margin:0;font-weight:400;letter-spacing:-.02em;text-wrap:balance;}
       </div>
       <div class="sp-mid">
         <div class="fdemo" data-fdemo="combo_all"><div class="fdemo-stage"><div class="fdemo-scaler phone-screen" data-appearance="dark"></div></div></div>
-        <div class="fdemo-cap idle"><i></i><span>自动演示</span></div>
       </div>
       <div class="sp-col">
         <span class="sp-cap">AI</span>
@@ -3222,7 +3177,9 @@ document.querySelectorAll("#sheetQuick button").forEach(function(b){
   var liveText=document.getElementById("demoLiveText");
   var toggleBtn=document.getElementById("demoToggle");
   var phone=document.querySelector(".phone-screen");
-  if(!phone||!toggleBtn)return;
+  /* 状态条/字幕/按钮已从页面移除，这里全部按"可选"处理：
+     只要 phone 存在演示就照常跑，缺失的节点一律跳过。 */
+  if(!phone)return;
 
   var TAB_LABEL={review:"刷卡",library:"卡片库",thinking:"思考",settings:"设置"};
   var timer=null,idx=0,taken=false,paused=false;
@@ -3297,17 +3254,17 @@ document.querySelectorAll("#sheetQuick button").forEach(function(b){
   }
 
   function setStatus(playing){
-    liveNode.classList.toggle("playing",playing);
-    liveText.textContent=playing?"自动演示中":(taken?"你已接管":"演示已暂停");
-    toggleBtn.textContent=playing?"暂停演示":(taken?"重新演示":"继续演示");
+    if(liveNode)liveNode.classList.toggle("playing",playing);
+    if(liveText)liveText.textContent=playing?"自动演示中":(taken?"你已接管":"演示已暂停");
+    if(toggleBtn)toggleBtn.textContent=playing?"暂停演示":(taken?"重新演示":"继续演示");
   }
 
   function play(){
     if(taken||paused)return;
     var s=STEPS[idx%STEPS.length];
     idx++;
-    tagNode.textContent="MemFlow iOS · "+TAB_LABEL[s.tab];
-    stepNode.textContent="正在演示："+s.say;
+    if(tagNode)tagNode.textContent="MemFlow iOS · "+TAB_LABEL[s.tab];
+    if(stepNode)stepNode.textContent="正在演示："+s.say;
     try{s.run();}catch(e){}
     timer=setTimeout(play,s.wait);
   }
@@ -3318,14 +3275,14 @@ document.querySelectorAll("#sheetQuick button").forEach(function(b){
   function takeOver(){
     if(taken)return;
     taken=true;stop();
-    stepNode.textContent="你已接管，可以自由操作";
+    if(stepNode)stepNode.textContent="你已接管，可以自由操作";
     setStatus(false);
   }
   ["pointerdown","wheel","keydown","touchstart"].forEach(function(ev){
     phone.addEventListener(ev,takeOver,{passive:true});
   });
 
-  toggleBtn.addEventListener("click",function(){
+  if(toggleBtn)toggleBtn.addEventListener("click",function(){
     if(taken){
       /* 重新演示：复位到干净状态再从头播 */
       taken=false;paused=false;idx=0;
@@ -3341,14 +3298,14 @@ document.querySelectorAll("#sheetQuick button").forEach(function(b){
       return;
     }
     paused=!paused;
-    if(paused){stop();stepNode.textContent="演示已暂停，你可以自己操作";}
+    if(paused){stop();if(stepNode)stepNode.textContent="演示已暂停，你可以自己操作";}
     else play();
     setStatus(!paused);
   });
 
   /* 后台标签或 reduced-motion 下不空跑 */
   if(document.hidden||reduceMotion){
-    paused=true;stepNode.textContent="演示已暂停，你可以自己操作";setStatus(false);
+    paused=true;if(stepNode)stepNode.textContent="演示已暂停，你可以自己操作";setStatus(false);
   }else{
     setStatus(true);
     setTimeout(play,1400);
